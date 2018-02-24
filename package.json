@@ -1,0 +1,11 @@
+{
+  "name": "node_complete",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/AndreuMad/node_complete.git",
+  "author": "Andrii Labyk <andrii.labyk@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "lodash": "^4.17.5"
+  }
+}
