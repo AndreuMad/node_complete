@@ -5,7 +5,12 @@
   "repository": "https://github.com/AndreuMad/node_complete.git",
   "author": "Andrii Labyk <andrii.labyk@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "dev": "node app.js add --title 'Andrii11' --body 'Web Developer'"
+  },
   "dependencies": {
-    "lodash": "^4.17.5"
+    "lodash": "^4.17.5",
+    "nodemon": "^1.15.1",
+    "yargs": "^11.0.0"
   }
 }
