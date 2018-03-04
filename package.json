@@ -6,12 +6,18 @@
   "author": "Andrii Labyk <andrii.labyk@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "node app.js add --title 'Andrii11' --body 'Web Developer'"
+    "dev": "node app.js add --title 'Andrii11' --body 'Web Developer'",
+    "server": "nodemon 3-node-web-server/server.js -e js,hbs"
   },
   "dependencies": {
+    "axios": "^0.18.0",
+    "express": "^4.16.2",
+    "hbs": "^4.0.1",
     "lodash": "^4.17.5",
     "nodemon": "^1.15.1",
-    "request": "^2.83.0",
+    "request": "^2.83.0"
+  },
+  "devDependencies": {
     "yargs": "^11.0.0"
   }
 }

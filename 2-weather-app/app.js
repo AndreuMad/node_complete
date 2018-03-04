@@ -1,5 +1,7 @@
-const request = require('request');
 const yargs = require('yargs');
+
+const geocode = require('./geocode');
+const getWeather = require('./getWeater').getWeather;
 
 const arguments = yargs
   .options({
@@ -14,11 +16,7 @@ const arguments = yargs
   .alias('help', 'h')
   .argv;
 
-console.log(arguments);
-
-request({
-  url: `https://maps.googleapis.com/maps/api/geocode/json?address=${encodeURIComponent(arguments.a)}`,
-  json: true
-}, (error, response, body) => {
-  console.log(JSON.stringify(body, undefined, 2));
-});
+geocode.geocodeAddress(arguments.a)
+  .then(({ lat, lng }) => getWeather(lat, lng))
+  .then(result => console.log(result))
+  .catch(error => console.log(error));
